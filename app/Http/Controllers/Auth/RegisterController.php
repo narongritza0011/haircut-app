@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Illuminate\Http\Request;
+
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -47,14 +49,16 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string',  'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:4', 'confirmed'],
-        ]);
-    }
+    // protected function validator(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'name' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string',  'max:255', 'unique:users'],
+    //         'password' => ['required', 'string', 'min:4', 'confirmed'],
+    //         'tel' => ['required'],
+
+    //     ]);
+    // }
 
     /**
      * Create a new user instance after a valid registration.
@@ -62,13 +66,38 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    // protected function create(array $data)
+    // {
+    //     return User::create([
+    //         'name' => $data['name'],
+    //         'email' => $data['email'],
+    //         'role' => 2,
+    //         'password' => Hash::make($data['password']),
+    //     ]);
+    //     return redirect()->route('login')->with('success', 'สมัครสมาชิกสำเร็จ');
+    // }
+
+
+    function register(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'role' => 2,
-            'password' => Hash::make($data['password']),
+        // dd('test');
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string',  'max:255', 'unique:users'],
+            'tel' => 'required',
+            'password' => ['required', 'string', 'min:4', 'confirmed'],
         ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->tel = $request->tel;
+        $user->role = 2;
+        $user->password = Hash::make($request->password);
+
+        if ($user->save()) {
+            return redirect()->back()->with('success', 'สมัครสมาชิกสำเร็จ');
+        } else {
+            return redirect()->back()->with('error', 'สมัครสมากชิกไม่สำเร็จ!');
+        }
     }
 }

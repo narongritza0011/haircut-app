@@ -12,6 +12,16 @@
                     <div class="text-center p-t-20 p-b-20">
                         <span class="db"><img src="assets/images/logo.png" alt="logo" /></span>
                     </div>
+                    @if (Session::get('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </div>
+                    @endif
+                    @if (Session::get('error'))
+                        <div class="alert alert-danger">
+                            {{ Session::get('error') }}
+                        </div>
+                    @endif
                     <!-- Form -->
                     <form class="form-horizontal m-t-20" method="POST" action="{{ route('register') }}">
                         @csrf
@@ -35,6 +45,22 @@
                                         </span>
                                     @enderror
                                 </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success text-white" id="basic-addon1"><i
+                                                class="ti-user"></i></span>
+                                    </div>
+                                    <input type="text" id="tel" value="{{ old('tel') }}" autocomplete="tel" autofocus
+                                        class="form-control form-control-lg @error('tel') is-invalid @enderror"
+                                        name="tel" placeholder="เบอร์โทร" aria-label="tel"
+                                        aria-describedby="basic-addon1">
+
+                                    @error('tel')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                                 <!-- email -->
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -45,7 +71,7 @@
                                         class="form-control form-control-lg @error('email') is-invalid @enderror"
                                         autocomplete="email" name="email" placeholder="บัญชีผู้ใช้"
                                         aria-label="Username" value="{{ old('email') }}"
-                                        aria-describedby="basic-addon1" >
+                                        aria-describedby="basic-addon1">
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -60,7 +86,7 @@
                                     <input id="password" type="password"
                                         class="form-control form-control-lg @error('password') is-invalid @enderror"
                                         autocomplete="new-password" name="password" placeholder="รหัสผ่าน"
-                                        aria-label="Password" aria-describedby="basic-addon1" >
+                                        aria-label="Password" aria-describedby="basic-addon1">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -72,10 +98,10 @@
                                         <span class="input-group-text bg-info text-white" id="basic-addon2"><i
                                                 class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" id="password-confirm"
+                                    <input type="password" class="form-control form-control-lg" id="password-confirm"
                                         name="password_confirmation" autocomplete="new-password"
                                         placeholder=" ยืนยันรหัสผ่าน" aria-label="Password"
-                                        aria-describedby="basic-addon1" >
+                                        aria-describedby="basic-addon1">
                                 </div>
                             </div>
                         </div>
@@ -84,6 +110,12 @@
                                 <div class="form-group">
                                     <div class="p-t-20">
                                         <button class="btn btn-block btn-lg btn-info" type="submit">สมัครสมาชิก</button>
+                                    </div>
+                                    <div class="p-t-20">
+                                        <span class="text-white">มีบัญชีผู้ใช้อยู่เเล้ว
+                                            ?</span>
+                                        <a class="text-success" href="{{ route('login') }}">เข้าสู่ระบบ
+                                        </a>
                                     </div>
                                 </div>
                             </div>

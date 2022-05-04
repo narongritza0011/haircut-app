@@ -11,10 +11,15 @@
                         <span class="db"><img src="{{ asset('assets/images/logo.png') }}"
                                 alt="logo" /></span>
                     </div>
+                    @if (Session::get('error'))
+                        <div class="alert alert-danger">
+                            {{ Session::get('error') }}
+                        </div>
+                    @endif
                     <!-- Form -->
                     <form method="POST" class="form-horizontal m-t-20">
                         @csrf
-                       
+
                         <div class="row p-b-30">
                             <div class="col-12">
                                 <div class="input-group mb-3">
@@ -22,7 +27,7 @@
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i
                                                 class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Username"
+                                    <input type="text" class="form-control form-control-lg" placeholder="บัญชีผู้ใช้"
                                         aria-label="Username" aria-describedby="basic-addon1" name="email">
                                     {{-- @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -42,7 +47,7 @@
                                         <span class="input-group-text bg-warning text-white" id="basic-addon2"><i
                                                 class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Password"
+                                    <input type="password" class="form-control form-control-lg" placeholder="รหัสผ่าน"
                                         aria-label="Password" aria-describedby="basic-addon1" name="password">
 
 
