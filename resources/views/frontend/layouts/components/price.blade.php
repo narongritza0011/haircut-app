@@ -3,9 +3,8 @@
         <div class="row">
             <div class="col-xl-6 col-md-6">
                 <div class="section_title mb-55">
-                    <h3>Our Pricing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore</p>
+                    <h3>ค่าบริการ</h3>
+                    <p>จองคิวล่วงหน้า line: @kew หรือกดปุ่ม <strong> “จองคิวตัดผม”</strong> ได้เลย</p>
                 </div>
             </div>
         </div>
@@ -28,10 +27,10 @@
                                 </div>
                                 <div class="hair_style_info">
                                     <div class="prise d-flex justify-content-between">
-                                        <span>Hair Cut</span>
-                                        <span>$8</span>
+                                        <span>ตัดผมเด็ก</span>
+                                        <span>60</span>
                                     </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    <p>เลือกทรงผมได้เลย </p>
                                 </div>
                             </div>
                             <div class="single_service">
@@ -39,272 +38,23 @@
                                     <div class="thumb">
                                         <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
 
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Style</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
 
                                     </div>
                                 </div>
                                 <div class="hair_style_info">
                                     <div class="prise d-flex justify-content-between">
-                                        <span>Shaving</span>
-                                        <span>$8</span>
+                                        <span>ตัดผมผู้ใหญ่</span>
+                                        <span>120</span>
                                     </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    <p>เลือกทรงผมได้เลย </p>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="single_prising">
-                            <div class="prise_title">
-                                <h4>Hair Styling</h4>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Cut</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Style</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Shaving</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
-                    <div class="prising_active d-flex justify-content-between">
-                        <div class="single_prising">
-                            <div class="prise_title">
-                                <h4>Hair Styling</h4>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Cut</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Style</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Shaving</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_prising">
-                            <div class="prise_title">
-                                <h4>Hair Styling</h4>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Cut</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Style</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Shaving</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="prising_active d-flex justify-content-between">
-                        <div class="single_prising">
-                            <div class="prise_title">
-                                <h4>Hair Styling</h4>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Cut</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Style</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Shaving</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_prising">
-                            <div class="prise_title">
-                                <h4>Hair Styling</h4>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Cut</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Hair Style</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>Shaving</span>
-                                        <span>$8</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sitamet, consectetur </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
         </div>

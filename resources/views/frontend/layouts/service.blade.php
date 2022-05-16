@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Services</h3>
+                    <h3>บริการ</h3>
                 </div>
             </div>
         </div>

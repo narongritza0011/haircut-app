@@ -5,12 +5,11 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-8">
                         <div class="slider_text">
-                            <h3>Modern barber
-                                shop in center
-                                of the city</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="#" class="boxed-btn3">Appointment</a>
+                            <h3>ร้านตัดผมชาย Haircut Kew
+                            </h3>
+                            <p>บริการจัดแต่งทรงผมให้เข้ากับความต้องการและไลฟ์สไตล์ ความชอบของลูกค้า</p>
+                            <a href="#test-form" class="boxed-btn3 popup-with-form">จองคิวตัดผม</a>
+
                         </div>
                     </div>
                 </div>
@@ -21,12 +20,9 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-8">
                         <div class="slider_text">
-                            <h3>Modern barber
-                                shop in center
-                                of the city</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="#" class="boxed-btn3">Appointment</a>
+                            <h3>ร้านตัดผมชาย Haircut Kew</h3>
+                            <p>บริการจัดแต่งทรงผมให้เข้ากับความต้องการและไลฟ์สไตล์ ความชอบของลูกค้า</p>
+                            <a href="#test-form" class="boxed-btn3 popup-with-form">จองคิวตัดผม</a>
                         </div>
                     </div>
                 </div>
@@ -37,12 +33,9 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-8">
                         <div class="slider_text">
-                            <h3>Modern barber
-                                shop in center
-                                of the city</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="#" class="boxed-btn3">Appointment</a>
+                            <h3>ร้านตัดผมชาย Haircut Kew</h3>
+                            <p>บริการจัดแต่งทรงผมให้เข้ากับความต้องการและไลฟ์สไตล์ ความชอบของลูกค้า</p>
+                            <a href="#test-form" class="boxed-btn3 popup-with-form">จองคิวตัดผม</a>
                         </div>
                     </div>
                 </div>

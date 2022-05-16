@@ -11,9 +11,7 @@
 
                             </a>
                         </div>
-                        <p class="address_text">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed
-                            do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. <br> Quis ipsum
-                            suspendisse.
+                        <p class="address_text">บริการจัดแต่งทรงผมให้เข้ากับความต้องการและไลฟ์สไตล์ ความชอบของลูกค้า
                         </p>
                         <div class="socail_links">
                             <ul>
@@ -48,28 +46,27 @@
                             Information
                         </h3>
                         <ul class="links">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/service">Services</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2  col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Services
+                            บริการ
                         </h3>
                         <ul class="links">
-                            <li><a href="#">Smooth Shave </a></li>
-                            <li><a href="#">Beard Triming</a></li>
-                            <li><a href="#"> Haircut Styles</a></li>
+                            <li><a href="#">โกนหนวด </a></li>
+                            <li><a href="#">ตัดแต่งหนวด</a></li>
+                            <li><a href="#">ออกแบบทรงผม</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2  col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Follow Us
+                            ช่องทางติดตาม
                         </h3>
                         <ul class="links">
                             <li><a href="#">FaceBook</a></li>
@@ -91,9 +88,9 @@
                         Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | This template is made with <i
-                            class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                            target="_blank">Colorlib</a>
+                        </script> All rights reserved | made with <i class="fa fa-heart"
+                            aria-hidden="true"></i> by
+                        D
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                     </p>

@@ -20,15 +20,13 @@
                 <div class="about_info">
                     <div class="section_title mb-20px">
                         <h3>เกี่ยวกับ</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing eliteiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Qpsum suspendisse ultrices gravida. Risus commodo viverra
-                            maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultr.</p>
+                        <p>สะดวก สะอาด ปลอดภัย เนี๊ยบ.</p>
                     </div>
                     <p class="opening_hour">
-                        Opening Hour
-                        <span>10:00 am - 10:00 pm</span>
+                        เปิดให้บริการ เวลา
+                        <span>9.00 - 18.00 น.</span>
                     </p>
-                    <a href="about.html" class="boxed-btn3">About Us</a>
+                    <a href="/about" class="boxed-btn3">เกี่ยวกับ</a>
                 </div>
             </div>
         </div>
