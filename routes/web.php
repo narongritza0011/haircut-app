@@ -21,8 +21,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.layouts.home');
 });
+
+Route::get('/service', function () {
+    return view('frontend.layouts.service');
+});
+
+Route::get('/about', function () {
+    return view('frontend.layouts.about');
+});
+
+Route::get('/contact', function () {
+    return view('frontend.layouts.contact');
+});
+
 
 Route::middleware(['middleware' => 'PreventBackHistory'])->group(function () {
     Auth::routes();
@@ -37,10 +50,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
     //พนักงาน
     Route::get('users', [AdminController::class, 'users'])->name('admin.users');
     Route::post('users/add', [AdminController::class, 'add'])->name('admin.users.add');
-
     Route::get('users/edit/{id}', [AdminController::class, 'edit'])->name('admin.users.edit');
     Route::post('users/update/{id}', [AdminController::class, 'update'])->name('admin.users.update');
-
     Route::get('users/delete/{id}', [AdminController::class, 'delete'])->name('admin.users.del');
 
 
@@ -68,6 +79,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
     Route::get('hair', [HairController::class, 'index'])->name('admin.hair');
     Route::post('hair/add', [HairController::class, 'store'])->name('admin.hair.store');
     Route::get('hair/edit/{id}', [HairController::class, 'edit'])->name('admin.hair.edit');
+    Route::post('hair/update/{id}', [HairController::class, 'update'])->name('admin.hair.update');
     Route::get('hair/delete/{id}', [HairController::class, 'delete'])->name('admin.hair.del');
 });
 

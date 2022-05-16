@@ -31,7 +31,7 @@
 
                         <div class="card">
                             <form class="form-horizontal" method="POST"
-                                action="{{ route('admin.time.update', $data->id) }}" enctype="multipart/form-data">
+                                action="{{ route('admin.hair.update', $data->id) }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                     <h4 class="card-title">เเก้ไขข้อมูลรูปภาพทรงผม</h4>
@@ -42,7 +42,9 @@
                                         <div class="col-sm-9 ">
                                             <img class="shadow m-3" src="{{ asset($data->image) }}" height="300px"
                                                 width="300px" alt="">
-
+                                            <input type="hidden" value="{{ $data->image }}" name="old_image">
+                                            <input class="form-control" type="file" name="image" id="image"
+                                                accept="image/png,image/jpeg">
                                             @error('image')
                                                 <span class="text-danger">
                                                     <strong>{{ $message }}</strong>

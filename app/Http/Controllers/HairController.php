@@ -33,7 +33,7 @@ class HairController extends Controller
         $name_gen = hexdec(uniqid());
         //ดึงนามสกุลไฟล์ภาพ
         $img_ext = strtolower($service_image->getClientOriginalExtension());
-        //รวมชื่อกับนามสกุลไฟล์ 
+        //รวมชื่อกับนามสกุลไฟล์
         $img_name = $name_gen . '.' . $img_ext;
 
 
@@ -70,25 +70,87 @@ class HairController extends Controller
 
 
 
-    function update(Request $request, $id)
+
+
+
+
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'time' => ['required'],
 
 
-        ]);
-        //อัพเดทข้อมูล
-        Hair::find($id)->update([
-            'time' => $request->time,
-            'status' => $request->status,
-        ]);
+        // dd($request->all());
+        //การเข้ารหัสรูปภาพ
+        $service_image = $request->file('image');
 
-        return redirect()->route('admin.time')->with('success', "อัพเดทข้อมูลสำเร็จ");
+        //อัพเดทภาพเเละชื่อ
+        if ($service_image) {
+
+
+
+            // dd($service_image);
+
+            //generate ชื่อภาพ
+            $name_gen = hexdec(uniqid());
+
+            //ดึงนามสกุลไฟล์ภาพ
+            $img_ext = strtolower($service_image->getClientOriginalExtension());
+            //รวมชื่อกับนามสกุลไฟล์
+            $img_name = $name_gen . '.' . $img_ext;
+
+            //บันทึกข้อมูลเเละอัพโหลด
+            $upload_location = 'image/hair/';
+            $full_path = $upload_location . $img_name;
+            //  dd($full_path);
+
+
+
+            //อัพเดทข้อมูล
+            Hair::find($id)->update([
+                'name' => $request->name,
+                'status' => $request->status,
+                'image' => $full_path,
+
+
+
+            ]);
+
+            //ลบภาพเก่าเเละอัพภาพใหม่เเทนที่
+            $old_image = $request->old_image;
+            unlink($old_image);
+
+            //อัพโหลดภาพ
+            $service_image->move($upload_location, $img_name);
+
+            return redirect()->route('admin.hair')->with('success', "อัพเดทข้อมูลเรียบร้อย");
+        } else {
+            //อัพเดทชื่ออย่างเดียว
+            //อัพเดทข้อมูล
+            Hair::find($id)->update([
+                'name' => $request->name,
+                'status' => $request->status,
+            ]);
+            return redirect()->route('admin.hair')->with('success', "อัพเดทข้อมูลเรียบร้อย");
+        }
+        // dd($request->all());
+        // // ตรวจสอบข้อมูล
+
+        // RoomType::find($id)->update([
+        //     'name' => $request->name,
+        // ]);
+        // // return redirect()->route('services')->with('success', "อัพเดทประเภทห้องพักเรียบร้อย");
+        // return redirect()->route('admin.room_type')->with('success', "อัพเดทประเภทห้องพักเรียบร้อย");
     }
+
 
     function delete($id)
     {
 
+        //1.ลบภาพ
+        $image = Hair::find($id)->image;
+        unlink($image);
+
+
+        //2.ลบข้อมูลจากฐานข้อมูล
         Hair::find($id)->delete();
         return redirect()->back()->with('success', "ลบข้อมูลสำเร็จ");
     }
