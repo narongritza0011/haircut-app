@@ -31,7 +31,7 @@
 
                         <div class="card">
                             <form class="form-horizontal" method="POST"
-                                action="{{ route('user.profile.update', Auth::user()->id) }}">
+                                action="{{ route('admin.profile.update', Auth::user()->id) }}">
                                 @csrf
                                 <div class="card-body">
                                     <h4 class="card-title">เเก้ไขข้อมูลบัญชีของฉัน</h4>

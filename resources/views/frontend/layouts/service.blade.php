@@ -24,7 +24,16 @@
 
 
 
+
+
+
+
     @include('frontend.layouts.components.service')
+
+
+
+
+    @include('frontend.layouts.components.project')
 
 
 

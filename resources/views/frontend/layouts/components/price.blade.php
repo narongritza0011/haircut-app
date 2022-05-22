@@ -17,6 +17,8 @@
                             <div class="prise_title">
                                 <h4>Hair Styling</h4>
                             </div>
+                            @foreach ($data_service as $data)
+
                             <div class="single_service">
                                 <div class="service_inner">
                                     <div class="thumb">
@@ -27,29 +29,14 @@
                                 </div>
                                 <div class="hair_style_info">
                                     <div class="prise d-flex justify-content-between">
-                                        <span>ตัดผมเด็ก</span>
-                                        <span>60</span>
+                                        <span>{{$data->service}}</span>
+                                        <span>{{$data->price}}</span>
                                     </div>
-                                    <p>เลือกทรงผมได้เลย </p>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="service_inner">
-                                    <div class="thumb">
-                                        <img src="{{ asset('frontend/assets/img/prising/1.png') }}" alt="">
-
-
-                                    </div>
-                                </div>
-                                <div class="hair_style_info">
-                                    <div class="prise d-flex justify-content-between">
-                                        <span>ตัดผมผู้ใหญ่</span>
-                                        <span>120</span>
-                                    </div>
-                                    <p>เลือกทรงผมได้เลย </p>
+                                    {{-- <p>เลือกทรงผมได้เลย </p> --}}
                                 </div>
                             </div>
 
+                            @endforeach
                         </div>
 
                     </div>

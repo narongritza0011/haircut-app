@@ -28,7 +28,8 @@
                                                     <ul class="submenu">
 
                                                         @auth
-                                                            <li><a href="{{ route('admin.dashboard') }}">ผู้ดูเเล</a></li>
+                                                            <li><a href="{{ route('admin.dashboard') }}">ใช้งานระบบ</a>
+                                                            </li>
                                                         @else
                                                             <li><a href="{{ route('login') }}">เข้าสู่ระบบ</a></li>
 

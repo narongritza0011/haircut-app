@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
 
     {{-- <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css/responsive.css')}}"> --}}
-
-
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>

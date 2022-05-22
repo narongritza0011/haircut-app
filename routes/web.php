@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HairController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PointController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TimeController;
 use App\Http\Controllers\UserController;
@@ -20,21 +24,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.layouts.home');
-});
+// Route::get('/', function () {
+//     return view('frontend.layouts.home');
+// });
 
-Route::get('/service', function () {
-    return view('frontend.layouts.service');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/service', [HomeController::class, 'service']);
+Route::get('/about', [HomeController::class, 'about']);
+Route::get('/contact', [HomeController::class, 'contact']);
 
-Route::get('/about', function () {
-    return view('frontend.layouts.about');
-});
+Route::post('/appointment', [HomeController::class, 'appointment'])->name('appointment');
 
-Route::get('/contact', function () {
-    return view('frontend.layouts.contact');
-});
 
 
 Route::middleware(['middleware' => 'PreventBackHistory'])->group(function () {
@@ -47,6 +47,13 @@ Route::middleware(['middleware' => 'PreventBackHistory'])->group(function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventBackHistory']], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+
+
+    //profile
+    Route::get('profile', [AdminController::class, 'profile'])->name('admin.profile');
+    Route::post('profile/update/{id}', [AdminController::class, 'ProfileUpdate'])->name('admin.profile.update');
+
+
     //พนักงาน
     Route::get('users', [AdminController::class, 'users'])->name('admin.users');
     Route::post('users/add', [AdminController::class, 'add'])->name('admin.users.add');
@@ -81,10 +88,38 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
     Route::get('hair/edit/{id}', [HairController::class, 'edit'])->name('admin.hair.edit');
     Route::post('hair/update/{id}', [HairController::class, 'update'])->name('admin.hair.update');
     Route::get('hair/delete/{id}', [HairController::class, 'delete'])->name('admin.hair.del');
+
+
+    //จัดการจองคิว
+    Route::get('appointment/all', [AppointmentController::class, 'index'])->name('admin.appointment.all');
+    Route::get('appointment/edit/{id}', [AppointmentController::class, 'edit'])->name('admin.appointment.edit');
+    Route::post('appointment/update/{id}', [AppointmentController::class, 'update'])->name('admin.appointment.update');
+    Route::get('appointment/delete/{id}', [AppointmentController::class, 'delete'])->name('admin.appointment.del');
+
+
+    //จัดการช่องทางการติดต่อ
+    Route::get('contact/all', [ContactController::class, 'index'])->name('admin.contact');
+    Route::get('contact/edit/{id}', [ContactController::class, 'edit'])->name('admin.contact.edit');
+    Route::post('contact/update/{id}', [ContactController::class, 'update'])->name('admin.contact.update');
+
+
+    Route::get('collect/all', [PointController::class, 'collect'])->name('admin.collect');
+    Route::get('collect/delete/{id}', [PointController::class, 'collect_delete'])->name('admin.collect.del');
 });
 
 
 
 Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBackHistory']], function () {
+
+    //dashboard
     Route::get('dashboard', [UserController::class, 'index'])->name('user.dashboard');
+
+    //profile
+    Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
+    Route::post('user/update/{id}', [UserController::class, 'update'])->name('user.profile.update');
+
+
+    //สะสมเเต้ม
+    Route::get('point', [PointController::class, 'index'])->name('user.point');
+    Route::post('point/add', [PointController::class, 'store'])->name('user.point.store');
 });

@@ -1,45 +1,48 @@
-<form id="test-form" class="white-popup-block mfp-hide">
+<form id="test-form" class="white-popup-block mfp-hide" action="{{ route('appointment') }}" method="post">
     <div class="popup_box ">
         <div class="popup_inner">
-            <h3>Make an Appointment</h3>
-            <form action="#">
-                <div class="row">
-                    <div class="col-xl-6 col-md-6">
-                        <input id="datepicker" placeholder="Date">
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <input id="timepicker" placeholder="time">
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <select class="form-select wide" id="default-select" class="">
-                            <option data-display="Choose services">Choose services 1</option>
-                            <option value="1">Choose services 2</option>
-                            <option value="2">Choose services 3</option>
-                            <option value="3">Choose services 4</option>
-                        </select>
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <select class="form-select wide" id="default-select" class="">
-                            <option data-display="Choose Barbers">Choose Barbers</option>
-                            <option value="1">Zaki</option>
-                            <option value="2">Ronky</option>
-                            <option value="3">kalu</option>
-                        </select>
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <input type="text" placeholder="Your name">
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <input type="text" placeholder="Phone no">
-                    </div>
-                    <div class="col-xl-12">
-                        <input type="email" placeholder="Your email">
-                    </div>
-                    <div class="col-xl-12">
-                        <button type="submit" class="boxed-btn3">Submit</button>
-                    </div>
+            <h3>เเบบฟอร์มจองคิวตัดผม</h3>
+            @if (Session::get('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
                 </div>
-            </form>
+            @endif
+            @csrf
+            <div class="row">
+                <div class="col-xl-6 col-md-6 form-group">
+                    <input id="datepicker" placeholder="วันที่" name="date" required>
+                </div>
+                <div class="col-xl-6 col-md-6 form-group">
+                    {{-- <input id="timepicker" placeholder="time"> --}}
+                    <select class="form-select wide" id="default-select" name="time" required>
+
+                        @foreach ($data as $item)
+                            <option value="{{ $item->id }}">{{ $item->time }}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+                <div class="col-xl-6 col-md-6 form-group">
+                    <select class="form-select wide" id="default-select" class="" name="service" required>
+
+                        @foreach ($data_service as $item)
+                            <option value="{{ $item->id }}">{{ $item->service }}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+
+                <div class="col-xl-6 col-md-6 form-group">
+                    <input type="text" placeholder="ชื่อ" name="name" required>
+                </div>
+                <div class="col-xl-6 col-md-6 form-group">
+                    <input type="number" placeholder="เบอร์ติดต่อ" name="tel" required>
+                </div>
+                <div class="col-xl-12 form-group">
+                    <button type="submit" class="boxed-btn3">จองคิว</button>
+                </div>
+            </div>
+
         </div>
     </div>
 </form>

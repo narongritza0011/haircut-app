@@ -20,16 +20,8 @@
                                         <i class="ti-facebook"></i>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-twitter-alt"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </li>
+                              
+
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-instagram"></i>
@@ -71,7 +63,7 @@
                         <ul class="links">
                             <li><a href="#">FaceBook</a></li>
                             <li><a href="#">Instagram</a></li>
-                            <li><a href="#"> Twitter</a></li>
+
                         </ul>
                     </div>
                 </div>

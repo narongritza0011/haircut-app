@@ -30,7 +30,11 @@
                             src="{{ asset('assets/images/users/1.jpg') }}" alt="user" class="rounded-circle"
                             width="31"></a>
                     <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>
+                        <a class="dropdown-item"
+                            href="@if (Auth::user()->role == 1) {{ route('admin.profile') }}
+                            @elseif(Auth::user()->role == 2)
+                            {{ route('user.profile') }} @endif"><i
+                                class="ti-user m-r-5 m-l-5"></i>
                             ข้อมูลส่วนตัว</a>
 
 
